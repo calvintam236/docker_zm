@@ -9,7 +9,6 @@ COPY ["zm_0.5.2.tar.gz", "."]
 
 RUN tar -xf zm_0.5.2.tar.gz \
     && rm zm_0.5.2.tar.gz \
-    && ls -l \
     && mv zm_0.5.2/zm /usr/local/bin/zm \
     && chmod a+x /usr/local/bin/zm \
     && rm -r zm_0.5.2 \
