@@ -5,13 +5,13 @@ LABEL description="ZM in Docker. Supports GPU mining."
 
 WORKDIR /tmp
 
-COPY ["zm_0.5.7.tar.gz", "."]
+COPY ["zm_0.5.8.tar.gz", "."]
 
-RUN tar -xf zm_0.5.7.tar.gz \
-    && rm zm_0.5.7.tar.gz \
-    && mv zm_0.5.7/zm /usr/local/bin/zm \
+RUN tar -xf zm_0.5.8.tar.gz \
+    && rm zm_0.5.8.tar.gz \
+    && mv zm_0.5.8/zm /usr/local/bin/zm \
     && chmod a+x /usr/local/bin/zm \
-    && rm -r zm_0.5.7 \
+    && rm -r zm_0.5.8 \
     && rm -rf /var/lib/{apt,dpkg,cache,log}
 
 ENTRYPOINT ["zm"]
